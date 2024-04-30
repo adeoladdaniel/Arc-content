@@ -1,0 +1,121 @@
+.nav_links{
+    width: auto;
+    margin: auto;
+    svg{
+        display: flex;
+        margin: auto;
+        width: auto;
+        margin-bottom: 10px;
+}
+    }
+
+    .lolalogo{
+        width: 100%;
+        padding: 0rem 4rem;
+    
+    }
+   
+    .nav_bar{
+    
+    background: white;
+    padding: 0rem 3rem;
+ 
+    }
+  
+
+
+    .Home:active{
+        border-top: solid #5778EB 6px;
+
+    }
+
+ 
+
+
+.button_section{
+    button{
+        padding: 11px 31px;
+        border: none;
+        border-radius: 4px;
+        margin: 0rem 20px;
+        background-color: #FF5C00;
+        color: white;
+        font-size: 11.7387px;
+        line-height: 16px;
+        
+    }
+    button:first-child{
+        background-color: #FF5C00;
+
+        
+    }
+}
+
+.action-but{
+    position: absolute;
+    right: 100px;
+    padding: 7px 29px;
+    border: none;
+    border-radius: 6px;
+    background:$primary-color;
+    color: white;
+}
+.balance{
+    margin: auto;
+    width: 60%;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    padding: 0rem 2rem !important;
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .nav_links svg {
+        display: inline;
+        margin: auto;
+        width: auto;
+        margin-bottom: 1px;
+    }
+
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+     padding: 3px;
+     padding: 1rem 2rem !important;
+}
+
+.balance {
+    margin: auto;
+    width: 100%;
+}
+.navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+    margin: 0px -4px;
+}
+
+.action-but {
+    position: static;
+    right: 100px;
+    padding: 7px 29px;
+    border: none;
+    border-radius: 6px;
+    background: #41AA67;
+    color: white;
+}
+
+.lolalogo {
+    width: 100%;
+    padding: 0rem 2rem;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.55);
+    border-color: rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+}
+    }
+    

@@ -1,0 +1,19 @@
+.footer {
+    display: grid;
+    justify-content: center;
+    margin-top: 3rem;
+    justify-items: center;
+    p{
+        text-align: center;
+        font-weight: 200;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer_section{
+        display: grid;
+        grid-template-columns: auto;
+      
+        // background-color: rgba(78, 171, 121, 0.08);
+      }
+  }

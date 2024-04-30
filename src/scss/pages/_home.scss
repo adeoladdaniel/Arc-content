@@ -1,0 +1,314 @@
+.hero-section{
+    display: grid;
+    grid-template-columns: auto auto;
+
+
+    img{
+        padding: 0px 30px;
+    }
+}
+.hero-text{
+    padding: 4rem 0rem 6rem 7rem;
+
+    p{
+    padding: 0px 140px 30px 0px;
+    line-height: 37px;
+    }
+    h1{
+        padding: 26px 226px 41px 0px;
+    
+    }
+
+}
+
+.hero-but{
+    padding: 10px 29px;
+    border: none;
+    border-radius: 6px;
+    background:$primary-color;
+    color: white;
+    font-style: bold;
+}
+
+.create-section{
+    background-color: #F5F5F5;
+    h1{
+        text-align: center;
+        padding-top: 2rem;
+    }
+}
+.before-after-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    padding: 3rem;
+
+}
+.before-section{
+    background-color: white;
+    padding: 20px 80px;
+    border-radius: 2rem;
+    margin: 0px 50px;
+
+    div{
+        display: flex;
+
+        p{
+            margin: 6px 13px;
+        }
+    }
+}
+
+.after-section{
+    background-color: white;
+    padding: 20px 80px;
+    border-radius: 2rem;
+    margin: 0px 50px;
+
+    div{
+        display: flex;
+
+        p{
+            margin: 6px 13px;
+        }
+    }
+}
+
+.capsule{
+    background-color: #B20909;
+    padding: 1rem;
+    border-radius: 37px;
+    width: 23%;
+    text-align: center;
+    color: white;
+}
+.capsule01{
+    background-color: #08A764;
+    padding: 1rem;
+    border-radius: 37px;
+    width: 23%;
+    text-align: center;
+    color: white;
+}
+.phone-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    background: #13351F;
+    margin: 5rem;
+    padding: 34px 43px 0px 60px;
+    border-radius: 15px;
+    color: white;
+}
+.p-img-section{
+img{
+    margin: 0px 0px -20px 9px;
+
+}
+}
+.p-text-section{
+
+    h3{
+        padding: 20px 300px 0px 0px;
+        line-height: 50px;
+    
+    }
+
+    button{
+    padding: 7px 29px;
+    border: none;
+    border-radius: 6px;
+    background:$primary-color;
+    color: white;
+    margin-top: 2rem;
+
+    }
+}
+
+.tab-section{
+    grid-template-columns: auto auto;
+    display: grid;
+    margin: 5rem;
+}
+.context-section{
+    width: 82%;
+    margin: 0rem 11rem;
+    background: #41AA67;
+    padding: 2rem;
+    border-radius: 20px;
+    color: white;
+
+
+    button{
+        padding: 7px 29px;
+        border: none;
+        border-radius: 6px;
+        background:#13351F
+        ;
+        color: white;
+        }
+}
+
+.emoji-section{
+    background: #071E0F;
+    padding: 2rem;
+    color: white;
+    border-radius: 15px;
+
+    button{
+        padding: 7px 29px;
+        border: none;
+        border-radius: 6px;
+        background:$primary-color;
+        margin-top: 2rem;
+
+        color: white;
+        }
+
+        h1{
+            margin-top: 2rem;
+        }
+}
+
+.content-section{
+    h1{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+.testimonial-section{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.testimonial-card{
+    margin: 3rem;
+    box-shadow: rgba(213, 213, 213, 0.2588235294) 0px 0px 25px 4px;
+    padding: 3rem;
+    border-radius: 13px;
+    width: 35%;
+}
+
+
+.testimonial-header{
+    text-align: center;
+    padding-top: 2rem;
+}
+.user{
+    padding: 4px 0px 0px 13px;
+    img{
+        margin: 0px 0px 0px -20px;
+
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .hero-section {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .hero-text {
+        padding: 1rem 0rem 5rem 2rem;
+    }
+    .hero-text h1, .hero-text .h1 {
+        padding: 20px 0px;
+    }
+
+    .hero-text p {
+        padding: 0px 0px 0px 0px;
+        line-height: 37px;
+    }
+
+    .hero-section img {
+        padding: 0px 30px;
+        width: 85%;
+    }
+
+    .before-after-section {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        padding: 3rem 0rem;
+    }
+    .phone-section {
+        display: grid;
+        grid-template-columns: auto;
+        background: #13351F;
+        margin: 33px 0px;
+        padding: 27px 0px 0px 27px;
+        border-radius: 15px;
+        color: white;
+        width: 100%;
+    }
+
+    .p-text-section button {
+        padding: 7px 29px;
+        border: none;
+        border-radius: 6px;
+        background: #41AA67;
+        color: white;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .p-text-section h3, .p-text-section .h3 {
+        padding: 4px 0px 0px 0px;
+        line-height: 40px;
+    }
+
+    .p-img-section img {
+        margin: 0px 0px -20px 9px;
+        width: 80%;
+    }
+    .tab-section {
+        grid-template-columns: auto;
+        display: grid;
+        margin: 0rem;
+    }
+
+    .emoji-section {
+        background: #071E0F;
+        padding: 2rem;
+        color: white;
+        border-radius: 15px;
+    }
+
+    .context-section {
+        width: 100%;
+        margin: 20px 0px;
+        background: #41AA67;
+        padding: 2rem;
+        border-radius: 20px;
+        color: white;
+    }
+
+      .pood{
+            width: 100%;
+        }
+ 
+        .after-section {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 2rem;
+            margin: 0px 10px;
+        }
+
+        .before-section {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 2rem;
+            margin: 32px 10px;
+        }
+
+        .testimonial-card {
+            margin: 1rem;
+            box-shadow: rgba(213, 213, 213, 0.2588235294) 0px 0px 25px 4px;
+            padding: 2rem;
+            border-radius: 13px;
+            width: 100%;
+        }
+}
