@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-function Q1(){
+function Q4(){
 
 
     return(
@@ -19,28 +19,27 @@ function Q1(){
             {/* <Seo page="Home"> */}
               {/* <Navbar/> */}
 
-       <div>
-        <img src="./assets/tweet-something.svg" alt="" />
-       </div>
+    
 
        <div className="label-section"> 
         <img src="./assets/logo.svg" alt="" /> <h1> Creator Value Calculator</h1>
        </div>
 
-        <div className="input-section">
-            <form action="">
-                <input type="text" placeholder="What is your Name?" /> <br />  <br />
+      
+        <div className="anwser-section">
 
-                <Link to="/q2"><button > Get started</button></Link>
+        <h3>Who is your target audience?</h3>
+            <p>Knowing who you're creating for is super important, It helps you create content that resonates with what they like and need, so you do better as a creator.</p>
+            <form action="">
+                <input type="text" placeholder="Who is your target audience?" /> <br />  <br />
+
+                <Link to="/q5"><button > Continue</button></Link>
             </form>
         </div>
 
 
 
-       <div className="image1">
-        <img src="./assets/business-deal.svg" alt="" />
-       </div>
-
+  
             
             
 <Footer/>
@@ -51,4 +50,4 @@ function Q1(){
     );
 }
 
-export default Q1;
+export default Q4;

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 
 
-function Q1(){
+function Q6(){
 
 
     return(
@@ -20,25 +20,30 @@ function Q1(){
               {/* <Navbar/> */}
 
        <div>
-        <img src="./assets/tweet-something.svg" alt="" />
        </div>
 
        <div className="label-section"> 
         <img src="./assets/logo.svg" alt="" /> <h1> Creator Value Calculator</h1>
        </div>
+        <div className="check-box-section">
+        <h4>Which of these platforms are you active on? (select your top 3)</h4>
 
-        <div className="input-section">
-            <form action="">
-                <input type="text" placeholder="What is your Name?" /> <br />  <br />
+             <div className="c-option">  <input type="checkbox" /> Impact</div>
 
-                <Link to="/q2"><button > Get started</button></Link>
-            </form>
+             <div className="c-option">  <input type="checkbox" />  Growth</div>
+
+
+             <div className="c-option">  <input type="checkbox" />  Not Sure</div>
+
+
+           
+
+
         </div>
 
-
+        <Link to="/q7">     <button className="q-button">Continue</button></Link>
 
        <div className="image1">
-        <img src="./assets/business-deal.svg" alt="" />
        </div>
 
             
@@ -51,4 +56,4 @@ function Q1(){
     );
 }
 
-export default Q1;
+export default Q6;
