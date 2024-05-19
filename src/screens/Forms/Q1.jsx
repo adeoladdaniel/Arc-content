@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 // import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FormDataProvider } from '../../components/FormDataContext';
+import InputComponent1 from '../../components/DisplayComponent';
+import InputComponent2 from '../../components/InputComponent1';
+import { SurveyContext, useSurveyData } from "../../components/SurveyContext";
+// import DisplayComponent from '../../components/InputComponent2';
 
 
 
@@ -10,6 +15,14 @@ import { Link } from "react-router-dom";
 
 
 function Q1(){
+
+    const formContext = useContext(SurveyContext)
+
+    const {formValues,setFormValues} = useSurveyData()
+
+    const [q1Values, setQ1Values] = useState({name: formContext.name})
+
+    const navigate = useNavigate()
 
 
     return(
@@ -29,9 +42,17 @@ function Q1(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What is your Name?" /> <br />  <br />
+                <input type="text" placeholder="What is your Name?" value={q1Values.name} onChange={(e) => {
+                    setQ1Values((prev) => ({...prev, name:e.target.value}))
+                }}/> <br />  <br />
 
-                <Link to="/q2"><button > Get started</button></Link>
+                <button
+                type="button"
+                onClick={() => {
+                    setFormValues((prev) => ({...prev, ...q1Values}))
+
+                    navigate("/q2")
+                }}> Get started</button>
             </form>
         </div>
 
@@ -41,6 +62,14 @@ function Q1(){
         <img src="./assets/business-deal.svg" alt="" />
        </div>
 
+
+       <FormDataProvider>
+      <div>
+        <InputComponent1 />
+        <InputComponent2 />
+        {/* <DisplayComponent /> */}
+      </div>
+    </FormDataProvider>
             
             
 <Footer/>

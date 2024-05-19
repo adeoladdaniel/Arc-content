@@ -11,6 +11,10 @@ const Q3 = lazy(() => import("../screens/Forms/Q3"))
 const Q4 = lazy(() => import("../screens/Forms/Q4"))
 const Q5 = lazy(() => import("../screens/Forms/Q5"))
 const Q6 = lazy(() => import("../screens/Forms/Q6"))
+const Q7 = lazy(() => import("../screens/Forms/Q7"))
+const Q8 = lazy(() => import("../screens/Forms/Q8"))
+
+
 
 
 
@@ -34,6 +38,10 @@ function AppRoute() {
           <Route exact path="/q4" element={<Q4/>} />
           <Route exact path="/q5" element={<Q5/>} />
           <Route exact path="/q6" element={<Q6/>} />
+          <Route exact path="/q7" element={<Q7/>} />
+          <Route exact path="/q8" element={<Q8/>} />
+
+
 
 
 

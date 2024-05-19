@@ -37,7 +37,7 @@ function Q2(){
                 Are you ready?
             </p>
 
-       <Link to="/q3">     <button className="q-button">I'm Ready</button></Link>
+       <Link to="/q3">     <button          type="button" className="q-button">I'm Ready</button></Link>
 
 
 

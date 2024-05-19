@@ -1,10 +1,14 @@
 import "./scss/main.scss";
 import Route from "./routes/Route";
+import SurveyWrapper, {useSurveyData} from "./components/SurveyContext";
 
 
 function App() {
+
   return (
-    <Route/>
+    <SurveyWrapper>
+      <Route/>
+    </SurveyWrapper>
   ) ;
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 // import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
+import { useSurveyData } from "../../components/SurveyContext";
 
 
 
@@ -11,7 +12,7 @@ import { Link } from "react-router-dom";
 
 function Q4(){
 
-
+    const {setFormValues}=useSurveyData()
     return(
 
         <React.Fragment>
@@ -31,9 +32,9 @@ function Q4(){
         <h3>Who is your target audience?</h3>
             <p>Knowing who you're creating for is super important, It helps you create content that resonates with what they like and need, so you do better as a creator.</p>
             <form action="">
-                <input type="text" placeholder="Who is your target audience?" /> <br />  <br />
+                <input onChange={(e)=>setFormValues(prev=>({...prev,target_audience:e.target.value}))} type="text" placeholder="Who is your target audience?" /> <br />  <br />
 
-                <Link to="/q5"><button > Continue</button></Link>
+                <Link to="/q5"><button          type="button" > Continue</button></Link>
             </form>
         </div>
 

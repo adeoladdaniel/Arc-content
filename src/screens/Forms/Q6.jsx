@@ -2,6 +2,7 @@ import React from "react";
 // import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
+import { useSurveyData } from "../../components/SurveyContext";
 
 
 
@@ -10,7 +11,13 @@ import { Link } from "react-router-dom";
 
 
 function Q6(){
+    const {setFormValues}=useSurveyData()
+const handleCheckbox=(e)=>{
+    const value=e.target.value
+    const checked=e.target.checked
 
+setFormValues(prev=>({...prev, media_channel:{...prev.active_platform,[value]:checked}}))
+}
 
     return(
 
@@ -41,7 +48,7 @@ function Q6(){
 
         </div>
 
-        <Link to="/q7">     <button className="q-button">Continue</button></Link>
+        <Link to="/q7">     <button          type="button" className="q-button">Continue</button></Link>
 
        <div className="image1">
        </div>
