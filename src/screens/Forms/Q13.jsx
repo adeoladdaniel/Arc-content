@@ -33,7 +33,7 @@ function Q1(){
               {/* <Navbar/> */}
 
        <div>
-        <img src="./assets/tweet-something.svg" alt="" />
+        {/* <img src="./assets/tweet-something.svg" alt="" /> */}
        </div>
 
        <div className="label-section"> 
@@ -42,7 +42,7 @@ function Q1(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What is your Name?" value={q1Values.name} onChange={(e) => {
+                <input type="text" placeholder="Who is your favorite creator?" value={q1Values.name} onChange={(e) => {
                     setQ1Values((prev) => ({...prev, name:e.target.value}))
                 }}/> <br />  <br />
 
@@ -51,15 +51,15 @@ function Q1(){
                 onClick={() => {
                     setFormValues((prev) => ({...prev, ...q1Values}))
 
-                    navigate("/q3")
-                }}> Get started</button>
+                    navigate("/q14")
+                }}> Continue</button>
             </form>
         </div>
 
 
 
        <div className="image1">
-        <img src="./assets/business-deal.svg" alt="" />
+        {/* <img src="./assets/business-deal.svg" alt="" /> */}
        </div>
 
 

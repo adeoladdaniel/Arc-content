@@ -25,34 +25,34 @@ h1{
     display: grid;
     margin: 90px 190px;
 
-    input {
-        padding: 1rem;
-        width: 640px;
-        border: none;
-        border-bottom: solid #D9D9D9;
-        margin: 1rem 0px;
-        font-size: 30px;
-        // color: #B6B0B0;
-
-        ::placeholder{
-            color: #B6B0B0;
-        }
-    }
-    input:focus-visible{
-        outline:none;
-    }
-    
-        button{
-            border: none;
-            padding: 16px 40px;
-            margin-top: 87px;
-            border-radius: 5px;
-            background: #41AA67;
-            color: white;
-            font-weight: 800;
-        }
+  
 }
 
+
+.inputer {
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-bottom: solid #D9D9D9;
+    margin: 1rem 0px;
+    font-size: 30px;
+    // color: #B6B0B0;
+
+    ::placeholder{
+        color: #B6B0B0;
+    }
+}
+
+
+.buttoner{
+    border: none;
+    padding: 16px 40px;
+    margin-top: 87px;
+    border-radius: 5px;
+    background: #41AA67;
+    color: white;
+    font-weight: 800;
+}
     .input-section{
         display: grid;
         justify-content: center;

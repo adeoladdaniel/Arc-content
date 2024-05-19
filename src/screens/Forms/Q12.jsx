@@ -12,7 +12,7 @@ import { useSurveyData } from "../../components/SurveyContext";
 
 
 
-function Q5(){
+function Q12(){
 
   const [selectedOption, setSelectedOption] = useState('null');
 
@@ -21,9 +21,8 @@ function Q5(){
   };
 
 
-  const {setFormValues}=useSurveyData()
-
     const [isChecked, setIsChecked] = useState(false);
+    const {formValues,setFormValues}=useSurveyData()
 
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
@@ -35,13 +34,12 @@ function Q5(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const value= e.target.value
-      const checked= e.target.checked
-      setFormValues(prev=>({...prev,know_your_niche: checked ? e.target.value :''}))
+      const checked=e.target.checked
+      const value=e.target.value
 
+    setFormValues(prev=>({...prev, clear_strategy:checked}))
 
     }
-
 
     return(
 
@@ -59,12 +57,12 @@ function Q5(){
       
         <div className="anwser-section">
 
-        <h3>Do you know your niche?</h3>
-            <p>Knowing your target audience is key to creating content. It helps you shape your content to fit their likes, needs, and habits. This makes your content more appealing to them, which can lead to increased engagement and success. Essentially, a well-understood target audience can help you make deeper connections and achieve better results with your content.</p>
+        <h3>Do you have a preferred time of day for creating?</h3>
             <div>
-    
-         
-            <div className="clickable">   <input 
+
+
+
+        <div className="clickable">   <input 
             onChange={handleFormData} 
             value={'option1'} name="clear_strategy" 
             style={{width:"22px", height:"24px"}}  
@@ -79,37 +77,55 @@ function Q5(){
          
           onChange={handleFormData}/> <h5> No</h5></div>
 
+      {/* {isChecked && (
+       <form action="">
+       <input onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))} type="text" placeholder="what kind of strategy would you like to develop?" /> <br />  <br />
+
+       <Link to="/q5"><button > Continue</button></Link>
+   </form>
+      )} */}
 
 
 
-        {selectedOption === 'option1' && (
+{selectedOption === 'option1' && (
         <div>
- <input className="inputer"
+
+<input className="inputer"
   type="text" 
-  placeholder="What are 3 topics you’re interested in your niche?"  
+  placeholder="If yes, when? "  
 
   onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
   />
+
 <br/>
- <Link to="/q6"><button
+<Link to="/q13"><button
     className="buttoner"
-                type="button"
+    type="button"
+    onClick={()=>console.log(formValues)} 
+
           
-              > Continue</button></Link>
+              > Continue</button></Link> 
         </div>
       )}
 
 {selectedOption === 'option2' && (
         <div>
-   <Link to="/q6">      <button
-    className="buttoner"
-                type="button"
-              
-          
-              > Continue</button> </Link>
+
+<input className="inputer"
+  type="text" 
+  placeholder="If no, why not?"  
+
+  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  />
+   <Link to="/q13">   
+      <button
+       className="buttoner"
+       type="button"
+onClick={()=>console.log(formValues)} 
+       
+       > Continue</button> </Link>
         </div>
       )}
-
     </div>
         </div>
 
@@ -126,4 +142,4 @@ function Q5(){
     );
 }
 
-export default Q5;
+export default Q12;

@@ -14,7 +14,7 @@ import { SurveyContext, useSurveyData } from "../../components/SurveyContext";
 
 
 
-function Q1(){
+function Q18(){
 
     const formContext = useContext(SurveyContext)
 
@@ -33,7 +33,7 @@ function Q1(){
               {/* <Navbar/> */}
 
        <div>
-        <img src="./assets/tweet-something.svg" alt="" />
+        {/* <img src="./assets/tweet-something.svg" alt="" /> */}
        </div>
 
        <div className="label-section"> 
@@ -42,7 +42,7 @@ function Q1(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What is your Name?" value={q1Values.name} onChange={(e) => {
+                <input type="text" placeholder="How do you maintain a healthy work-life balance in the creative industry?" value={q1Values.name} onChange={(e) => {
                     setQ1Values((prev) => ({...prev, name:e.target.value}))
                 }}/> <br />  <br />
 
@@ -51,15 +51,15 @@ function Q1(){
                 onClick={() => {
                     setFormValues((prev) => ({...prev, ...q1Values}))
 
-                    navigate("/q3")
-                }}> Get started</button>
+                    navigate("/")
+                }}> Continue</button>
             </form>
         </div>
 
 
 
        <div className="image1">
-        <img src="./assets/business-deal.svg" alt="" />
+        {/* <img src="./assets/business-deal.svg" alt="" /> */}
        </div>
 
 
@@ -74,4 +74,4 @@ function Q1(){
     );
 }
 
-export default Q1;
+export default Q18;

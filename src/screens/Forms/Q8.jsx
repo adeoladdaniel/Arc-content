@@ -1,33 +1,138 @@
-// import React, { useState, useEffect } from 'react';
+import React from "react";
+// import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { useSurveyData } from "../../components/SurveyContext";
 
-// function App() {
-//   const [inputValue, setInputValue] = useState('');
 
-//   // Load the input value from localStorage when the component mounts
-//   useEffect(() => {
-//     const storedValue = localStorage.getItem('inputValue');
-//     if (storedValue) {
-//       setInputValue(storedValue);
-//     }
-//   }, []);
 
-//   // Handle input change
-//   const handleInputChange = (event) => {
-//     const newValue = event.target.value;
-//     setInputValue(newValue);
-//     localStorage.setItem('inputValue', newValue);
-//   };
 
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         value={inputValue}
-//         onChange={handleInputChange}
-//       />
-//       <p>Stored Value: {inputValue}</p>
-//     </div>
-//   );
-// }
 
-// export default App;
+
+
+
+function Q8(){
+
+  const [selectedOption, setSelectedOption] = useState('null');
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+
+    const [isChecked, setIsChecked] = useState(false);
+    const {formValues,setFormValues}=useSurveyData()
+
+    const handleCheckboxChange = () => {
+      setIsChecked(!isChecked);
+    };
+
+    const [isChecked1, setIsChecked1] = useState(false);
+
+    const handleCheckboxChanger = () => {
+      setIsChecked1(!isChecked1);
+    };
+    const handleFormData=(e)=>{
+      const checked=e.target.checked
+      const value=e.target.value
+
+    setFormValues(prev=>({...prev, clear_strategy:checked}))
+
+    }
+
+    return(
+
+        <React.Fragment>
+
+            {/* <Seo page="Home"> */}
+              {/* <Navbar/> */}
+
+    
+
+       <div className="label-section"> 
+        <img src="./assets/logo.svg" alt="" /> <h1> Creator Value Calculator</h1>
+       </div>
+
+      
+        <div className="anwser-section">
+
+        <h3>Are you satisfied with your current level of engagement?</h3>
+            <div>
+
+
+
+        <div className="clickable">   <input 
+            onChange={handleFormData} 
+            value={'option1'} name="clear_strategy" 
+            style={{width:"22px", height:"24px"}}  
+             type="radio"
+             onClick={(e) => {setSelectedOption(e.target.value)}}
+             
+             /> <h5> Yes</h5> 
+        <input  name="clear_strategy" value={'option2'} 
+        style={{width:"22px", height:"24px"}}  
+         type="radio"
+         onClick={(e) => {setSelectedOption(e.target.value)}}
+         
+          onChange={handleFormData}/> <h5> No</h5></div>
+
+      {/* {isChecked && (
+       <form action="">
+       <input onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))} type="text" placeholder="what kind of strategy would you like to develop?" /> <br />  <br />
+
+       <Link to="/q5"><button > Continue</button></Link>
+   </form>
+      )} */}
+
+
+
+{selectedOption === 'option1' && (
+        <div>
+
+<br/>
+<Link to="/q9"><button
+    className="buttoner"
+    type="button"
+    onClick={()=>console.log(formValues)} 
+
+          
+              > Continue</button></Link> 
+        </div>
+      )}
+
+{selectedOption === 'option2' && (
+        <div>
+
+<input className="inputer"
+  type="text" 
+  placeholder="what engagement goals do you have for your content?"  
+
+  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  />
+   <Link to="/q9">   
+      <button
+       className="buttoner"
+       type="button"
+onClick={()=>console.log(formValues)} 
+       
+       > Continue</button> </Link>
+        </div>
+      )}
+    </div>
+        </div>
+
+
+
+  
+            
+            
+<Footer/>
+
+            {/* </Seo> */}
+          
+        </React.Fragment>
+    );
+}
+
+export default Q8;
