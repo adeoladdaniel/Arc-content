@@ -22,7 +22,7 @@ function Q10(){
 
 
     const [isChecked, setIsChecked] = useState(false);
-    const {formValues,setFormValues}=useSurveyData()
+    const {formValues,setFormValues,setStep}=useSurveyData()
 
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
@@ -98,13 +98,17 @@ function Q10(){
   />
 
 <br/>
-<Link to="/q11"><button
+<button
     className="buttoner"
     type="button"
-    onClick={()=>console.log(formValues)} 
+    onClick={()=> {
+        console.log(formValues)
+        
+        setStep(10)
+            }}
 
           
-              > Continue</button></Link> 
+              > Continue</button>
         </div>
       )}
 
@@ -117,13 +121,17 @@ function Q10(){
 
   onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
   />
-   <Link to="/q11">   
+  
       <button
        className="buttoner"
        type="button"
-onClick={()=>console.log(formValues)} 
+       onClick={()=> {
+        console.log(formValues)
+        
+        setStep(10)
+            }}
        
-       > Continue</button> </Link>
+       > Continue</button>
         </div>
       )}
     </div>

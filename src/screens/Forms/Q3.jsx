@@ -11,7 +11,7 @@ import { useSurveyData } from "../../components/SurveyContext";
 
 
 function Q3(){
-    const {setFormValues}=useSurveyData()
+    const {setFormValues, setStep}=useSurveyData()
 
 const handleSelectCheckbox=(e)=>{
     const checked=e.target.checked
@@ -46,8 +46,12 @@ const handleSelectCheckbox=(e)=>{
 
 
         </div>
-
-        <Link to="/q4">     <button          type="button" className="q-button">Continue</button></Link>
+   <button  
+        
+        onClick={()=>{
+            setStep(3)
+        }}
+        type="button" className="q-button">Continue</button>
 
        <div className="image1">
        </div>

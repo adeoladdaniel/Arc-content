@@ -5,9 +5,10 @@ export const SurveyContext = createContext({})
 export const SurveyWrapper = ({children}) => {
     
     const [formValues, setFormValues] = useState({})
+    const [step,setStep]=useState(1)
 
     const value={
-    formValues,setFormValues
+    formValues,setFormValues,step,setStep
     }
     return(
         <SurveyContext.Provider value={value}>

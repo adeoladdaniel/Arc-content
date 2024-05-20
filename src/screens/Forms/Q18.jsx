@@ -18,7 +18,7 @@ function Q18(){
 
     const formContext = useContext(SurveyContext)
 
-    const {formValues,setFormValues} = useSurveyData()
+    const {formValues,setFormValues,setStep} = useSurveyData()
 
     const [q1Values, setQ1Values] = useState({name: formContext.name})
 
@@ -49,9 +49,13 @@ function Q18(){
                 <button
                 type="button"
                 onClick={() => {
-                    setFormValues((prev) => ({...prev, ...q1Values}))
 
-                    navigate("/")
+                    console.log(formValues)
+
+                    setStep(18)
+                    setFormValues((prev) => ({...prev, ...q1Values},{
+
+                    }))
                 }}> Continue</button>
             </form>
         </div>

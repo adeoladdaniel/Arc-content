@@ -49,9 +49,13 @@ function Q16(){
                 <button
                 type="button"
                 onClick={() => {
-                    setFormValues((prev) => ({...prev, ...q1Values}))
 
-                    navigate("/q17")
+                    console.log(formValues)
+
+                    setStep(16)
+                    setFormValues((prev) => ({...prev, ...q1Values},{
+
+                    }))
                 }}> Continue</button>
             </form>
         </div>

@@ -22,7 +22,7 @@ function Q8(){
 
 
     const [isChecked, setIsChecked] = useState(false);
-    const {formValues,setFormValues}=useSurveyData()
+    const {formValues,setFormValues,setStep}=useSurveyData()
 
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
@@ -91,13 +91,17 @@ function Q8(){
         <div>
 
 <br/>
-<Link to="/q9"><button
+<button
     className="buttoner"
     type="button"
-    onClick={()=>console.log(formValues)} 
+    onClick={()=> {
+      console.log(formValues)
+      
+      setStep(8)
+          }}
 
           
-              > Continue</button></Link> 
+              > Continue</button>
         </div>
       )}
 
@@ -110,13 +114,17 @@ function Q8(){
 
   onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
   />
-   <Link to="/q9">   
+ 
       <button
        className="buttoner"
        type="button"
-onClick={()=>console.log(formValues)} 
+       onClick={()=> {
+        console.log(formValues)
+        
+        setStep(8)
+            }}
        
-       > Continue</button> </Link>
+       > Continue</button> 
         </div>
       )}
     </div>

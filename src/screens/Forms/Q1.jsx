@@ -16,11 +16,11 @@ import { SurveyContext, useSurveyData } from "../../components/SurveyContext";
 
 function Q1(){
 
-    const formContext = useContext(SurveyContext)
 
-    const {formValues,setFormValues} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({name: formContext.name})
+    const {formValues,setFormValues,setStep} = useSurveyData()
+
+    const [q1Values, setQ1Values] = useState({name: formValues.name})
 
     const navigate = useNavigate()
 
@@ -51,7 +51,7 @@ function Q1(){
                 onClick={() => {
                     setFormValues((prev) => ({...prev, ...q1Values}))
 
-                    navigate("/q3")
+                    setStep(2)
                 }}> Get started</button>
             </form>
         </div>

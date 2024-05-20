@@ -21,7 +21,7 @@ function Q5(){
   };
 
 
-  const {setFormValues}=useSurveyData()
+  const {setFormValues,setStep}=useSurveyData()
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -91,22 +91,29 @@ function Q5(){
   onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
   />
 <br/>
- <Link to="/q6"><button
+ <button
+
+onClick={()=>{
+  setStep(5)
+}}
     className="buttoner"
                 type="button"
           
-              > Continue</button></Link>
+              > Continue</button>
         </div>
       )}
 
 {selectedOption === 'option2' && (
         <div>
-   <Link to="/q6">      <button
+    <button
+    onClick={()=>{
+      setStep(5)
+    }}
     className="buttoner"
                 type="button"
               
           
-              > Continue</button> </Link>
+              > Continue</button> 
         </div>
       )}
 
