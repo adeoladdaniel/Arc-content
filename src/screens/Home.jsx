@@ -21,14 +21,15 @@ function Home(){
               <div className="header">
                   <div className="hero-section">
                     <div className="hero-text">
-                      <h1>    Get Your Contents to right audience, Boost your Reach and get Connected  </h1>
-                       <p>new generation of apps gets more and more personalized to dive deep into specific problems of a particular user. Today’s design story is about a product of this kind: meet Inspora, a virtual personal assistant in the issues of style and fashion.</p>
+                      <h1>    A RANDOM CREATIVE  TOOL <br />
+VALUE CALCULATOR  </h1>
+                       <p>Are you ready to Output 2x more videos? <br />
+Are you ready to get all the support you need as a creator?  <br />
+We created the Value Calculator to be your second brain, we know you need help</p>
                       <button className="hero-but">Get Started</button>
                     </div>
 
-                    <div>
-                        <img src="./assets/hero-img.svg" alt="hero" />
-                    </div>
+                   
                   </div>
 
               </div>

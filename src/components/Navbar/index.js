@@ -36,7 +36,7 @@ function Navvbar(){
     <Nav.Link href="#pricing">Features</Nav.Link>
     <Nav.Link href="#pricing">Pricing</Nav.Link> */}
 
-    <Nav.Link href="./q1"> <button className="action-but"> Try It</button></Nav.Link>
+    <Nav.Link href="./collect-data"> <button className="action-but"> Try It</button></Nav.Link>
 
 
   </Nav>

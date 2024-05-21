@@ -10,7 +10,7 @@ import { useSurveyData } from "../../components/SurveyContext";
 
 
 
-
+// option 1 is 10 marks and option 2 is 5 marks 
 
 function Q5(){
 
@@ -75,7 +75,8 @@ function Q5(){
         <input  name="clear_strategy" value={'option2'} 
         style={{width:"22px", height:"24px"}}  
          type="radio"
-         onClick={(e) => {setSelectedOption(e.target.value)}}
+         onClick={(e) =>
+          {setSelectedOption(e.target.value)}}
          
           onChange={handleFormData}/> <h5> No</h5></div>
 
