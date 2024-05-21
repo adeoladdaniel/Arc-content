@@ -16,13 +16,9 @@ import { SurveyContext, useSurveyData } from "../../components/SurveyContext";
 
 function Q1(){
 
-    const formContext = useContext(SurveyContext)
 
     const {formValues,setFormValues,setStep} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({favourite: formContext.favourite})
-
-    const navigate = useNavigate()
 
 
     return(
@@ -42,8 +38,8 @@ function Q1(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="Who is your favorite creator?" value={q1Values.favourite} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, favourite:e.target.value}))
+                <input type="text" placeholder="Who is your favorite creator?" value={formValues.favourite} onChange={(e) => {
+                    setFormValues((prev) => ({...prev, favourite:e.target.value}))
                 }}/> <br />  <br />
 
                 <button
@@ -53,9 +49,7 @@ function Q1(){
                     console.log(formValues)
 
                     setStep(13)
-                    setFormValues((prev) => ({...prev, ...q1Values},{
-
-                    }))
+                    
 
 
                 }}> Continue</button>

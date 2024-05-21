@@ -20,9 +20,7 @@ function Q17(){
 
     const {formValues,setFormValues,setStep} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({moment: formContext.moment})
 
-    const navigate = useNavigate()
 
 
     return(
@@ -42,8 +40,8 @@ function Q17(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What is a challenging moment in your creative career.?" value={q1Values.moment} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, moment:e.target.value}))
+                <input type="text" placeholder="What is a challenging moment in your creative career.?" value={formValues.moment} onChange={(e) => {
+                    setFormValues((prev) => ({...prev, moment:e.target.value}))
                 }}/> <br />  <br />
 
                 <button
@@ -53,9 +51,7 @@ function Q17(){
                     console.log(formValues)
 
                     setStep(17)
-                    setFormValues((prev) => ({...prev, ...q1Values},{
-
-                    }))
+                 
                 }}> Continue</button>
             </form>
         </div>

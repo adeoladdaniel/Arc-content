@@ -40,7 +40,7 @@ function Q1(){
        </div>
 
         <div className="input-section">
-            <form action="">
+            <div >
                 <input type="text" placeholder="What is your Name?" value={formValues?.name} onChange={(e) => {
                     setFormValues((prev) => ({...prev, name:e.target.value}))
                 }}/> <br />  <br />
@@ -50,7 +50,7 @@ function Q1(){
                 onClick={() => {
                     setStep(2)
                 }}> Get started</button>
-            </form>
+            </div>
         </div>
 
 

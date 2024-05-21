@@ -16,13 +16,12 @@ import { SurveyContext, useSurveyData } from "../../components/SurveyContext";
 
 function Q16(){
 
-    const formContext = useContext(SurveyContext)
+
 
     const {formValues,setFormValues,setStep} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({long: formContext.long})
 
-    const navigate = useNavigate()
+
 
 
     return(
@@ -42,8 +41,8 @@ function Q16(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What are your long-term career goals as a creator?" value={q1Values.long} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, long:e.target.value}))
+                <input type="text" placeholder="What are your long-term career goals as a creator?" value={formValues.long} onChange={(e) => {
+                    setFormValues((prev) => ({...prev, long:e.target.value}))
                 }}/> <br />  <br />
 
                 <button
@@ -53,9 +52,7 @@ function Q16(){
                     console.log(formValues)
 
                     setStep(16)
-                    setFormValues((prev) => ({...prev, ...q1Values},{
-
-                    }))
+                
                 }}> Continue</button>
             </form>
         </div>

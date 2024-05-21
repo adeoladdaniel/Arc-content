@@ -34,10 +34,10 @@ function Q11(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+      // const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, monetize_strategy:checked}))
+    setFormValues(prev=>({...prev, monetize_strategy:value}))
 
     }
 
