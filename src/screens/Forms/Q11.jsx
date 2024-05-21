@@ -37,7 +37,7 @@ function Q11(){
       const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, monetize_strategy:checked}))
 
     }
 
@@ -94,7 +94,7 @@ function Q11(){
   type="text" 
   placeholder="If yes, through which channels? "  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, monetize_strategy_text:e.target.value}))}
   />
 
 <br/>
@@ -119,7 +119,7 @@ function Q11(){
   type="text" 
   placeholder="If no, is this something you would like to consider in the future"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, monetize_strategy_text:e.target.value}))}
   />
    
       <button

@@ -34,10 +34,10 @@ function Q10(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+      // const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, seo_strategy:value}))
 
     }
 
@@ -94,7 +94,7 @@ function Q10(){
   type="text" 
   placeholder="If yes, how? "  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, seo_strategy_text:e.target.value}))}
   />
 
 <br/>
@@ -119,7 +119,7 @@ function Q10(){
   type="text" 
   placeholder="If no, would you like to start using SEO strategies?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, seo_strategy_text:e.target.value}))}
   />
   
       <button

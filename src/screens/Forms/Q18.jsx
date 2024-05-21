@@ -20,7 +20,7 @@ function Q18(){
 
     const {formValues,setFormValues,setStep} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({name: formContext.name})
+    const [q1Values, setQ1Values] = useState({maintain: formContext.maintain})
 
     const navigate = useNavigate()
 
@@ -42,8 +42,8 @@ function Q18(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="How do you maintain a healthy work-life balance in the creative industry?" value={q1Values.name} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, name:e.target.value}))
+                <input type="text" placeholder="How do you maintain a healthy work-life balance in the creative industry?" value={q1Values.maintain} onChange={(e) => {
+                    setQ1Values((prev) => ({...prev, maintain:e.target.value}))
                 }}/> <br />  <br />
 
                 <button

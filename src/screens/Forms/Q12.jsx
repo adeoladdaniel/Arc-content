@@ -34,10 +34,10 @@ function Q12(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+      // const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, create_strategy:value}))
 
     }
 
@@ -94,7 +94,7 @@ function Q12(){
   type="text" 
   placeholder="If yes, when? "  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, create_strategy_text:e.target.value}))}
   />
 
 <br/>
@@ -119,7 +119,7 @@ function Q12(){
   type="text" 
   placeholder="If no, why not?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, create_strategy_text:e.target.value}))}
   />
       <button
        className="buttoner"

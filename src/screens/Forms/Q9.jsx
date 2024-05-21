@@ -34,10 +34,10 @@ function Q9(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+      // const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, performance_strategy:value}))
 
     }
 
@@ -94,7 +94,7 @@ function Q9(){
   type="text" 
   placeholder="what metrics do you focus on?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, performance_strategy_text:e.target.value}))}
   />
 
 <br/>
@@ -120,7 +120,7 @@ function Q9(){
   type="text" 
   placeholder="what metrics would you like to start tracking?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, performance_strategy_text:e.target.value}))}
   />
 
       <button

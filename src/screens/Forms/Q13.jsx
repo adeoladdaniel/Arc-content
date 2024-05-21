@@ -20,7 +20,7 @@ function Q1(){
 
     const {formValues,setFormValues,setStep} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({name: formContext.name})
+    const [q1Values, setQ1Values] = useState({favourite: formContext.favourite})
 
     const navigate = useNavigate()
 
@@ -42,8 +42,8 @@ function Q1(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="Who is your favorite creator?" value={q1Values.name} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, name:e.target.value}))
+                <input type="text" placeholder="Who is your favorite creator?" value={q1Values.favourite} onChange={(e) => {
+                    setQ1Values((prev) => ({...prev, favourite:e.target.value}))
                 }}/> <br />  <br />
 
                 <button

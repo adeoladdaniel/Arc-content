@@ -34,10 +34,10 @@ function Q8(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, engagement_strategy:value}))
 
     }
 
@@ -112,7 +112,7 @@ function Q8(){
   type="text" 
   placeholder="what engagement goals do you have for your content?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, engagement_strategy_text:e.target.value}))}
   />
  
       <button

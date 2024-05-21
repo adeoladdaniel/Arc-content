@@ -18,9 +18,8 @@ function Q1(){
 
 
 
-    const {formValues,setFormValues,setStep} = useSurveyData()
+    const {setFormValues,setStep,formValues} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({name: formValues.name})
 
     const navigate = useNavigate()
 
@@ -42,15 +41,13 @@ function Q1(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What is your Name?" value={q1Values.name} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, name:e.target.value}))
+                <input type="text" placeholder="What is your Name?" value={formValues?.name} onChange={(e) => {
+                    setFormValues((prev) => ({...prev, name:e.target.value}))
                 }}/> <br />  <br />
 
                 <button
                 type="button"
                 onClick={() => {
-                    setFormValues((prev) => ({...prev, ...q1Values}))
-
                     setStep(2)
                 }}> Get started</button>
             </form>

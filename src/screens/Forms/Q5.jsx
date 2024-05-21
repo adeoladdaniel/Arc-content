@@ -69,6 +69,7 @@ function Q5(){
             value={'option1'} name="clear_strategy" 
             style={{width:"22px", height:"24px"}}  
              type="radio"
+
              onClick={(e) => {setSelectedOption(e.target.value)}}
              
              /> <h5> Yes</h5> 
@@ -89,7 +90,7 @@ function Q5(){
   type="text" 
   placeholder="What are 3 topics you’re interested in your niche?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, interested_niche_topics:e.target.value}))}
   />
 <br/>
  <button

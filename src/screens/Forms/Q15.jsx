@@ -37,7 +37,7 @@ function Q15(){
       const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, active_strategy:value}))
 
     }
 
@@ -94,7 +94,7 @@ function Q15(){
   type="text" 
   placeholder="If yes, which ones? "  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, active_strategy_text:e.target.value}))}
   />
 
 <br/>
@@ -119,7 +119,7 @@ function Q15(){
   type="text" 
   placeholder="If no, why not?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, active_strategy_text:e.target.value}))}
   />
   
       <button

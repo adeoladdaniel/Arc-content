@@ -18,9 +18,9 @@ function Q16(){
 
     const formContext = useContext(SurveyContext)
 
-    const {formValues,setFormValues} = useSurveyData()
+    const {formValues,setFormValues,setStep} = useSurveyData()
 
-    const [q1Values, setQ1Values] = useState({name: formContext.name})
+    const [q1Values, setQ1Values] = useState({long: formContext.long})
 
     const navigate = useNavigate()
 
@@ -42,8 +42,8 @@ function Q16(){
 
         <div className="input-section">
             <form action="">
-                <input type="text" placeholder="What are your long-term career goals as a creator?" value={q1Values.name} onChange={(e) => {
-                    setQ1Values((prev) => ({...prev, name:e.target.value}))
+                <input type="text" placeholder="What are your long-term career goals as a creator?" value={q1Values.long} onChange={(e) => {
+                    setQ1Values((prev) => ({...prev, long:e.target.value}))
                 }}/> <br />  <br />
 
                 <button

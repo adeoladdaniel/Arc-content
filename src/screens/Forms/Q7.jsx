@@ -34,10 +34,10 @@ function Q7(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, clear_strategy:value}))
 
     }
 

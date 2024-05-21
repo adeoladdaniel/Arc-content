@@ -34,10 +34,10 @@ function Q14(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const checked=e.target.checked
+      // const checked=e.target.checked
       const value=e.target.value
 
-    setFormValues(prev=>({...prev, clear_strategy:checked}))
+    setFormValues(prev=>({...prev, collaborate_strategy:value}))
 
     }
 
@@ -94,7 +94,7 @@ function Q14(){
   type="text" 
   placeholder="If yes, how? "  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, collaborate_strategy_text:e.target.value}))}
   />
 
 <br/>
@@ -120,7 +120,7 @@ function Q14(){
   placeholder="
   If no, would you like to start?"  
 
-  onChange={(e)=>    setFormValues(prev=>({...prev, clear_strategy_text:e.target.value}))}
+  onChange={(e)=>    setFormValues(prev=>({...prev, collaborate_strategy_text:e.target.value}))}
   />
   
       <button
