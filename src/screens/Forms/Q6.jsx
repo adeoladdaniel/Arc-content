@@ -33,7 +33,7 @@ setFormValues(prev=>({...prev, media_channel:{...prev.active_platform,[value]:ch
         <img src="./assets/logo.svg" alt="" /> <h1> Creator Value Calculator</h1>
        </div>
         <div className="check-box-section">
-        <h4>Which of these platforms are you active on? (select your top 3)</h4>
+        <h4>What are your goals for your social media channels?</h4>
 
              <div className="c-option">  <input type="checkbox" /> Impact</div>
 

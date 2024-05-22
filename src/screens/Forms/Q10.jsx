@@ -57,7 +57,7 @@ function Q10(){
       
         <div className="anwser-section">
 
-        <h3>Are you leveraging SEO in your content creation?</h3>
+        <h3>Are you leveraging SEO (Search Engine Optimizer) in your content creation?</h3>
             <div>
 
 

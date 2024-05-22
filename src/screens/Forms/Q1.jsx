@@ -49,7 +49,9 @@ function Q1(){
                 type="button"
                 onClick={() => {
                     setStep(2)
-                }}> Get started</button>
+                }}
+                //  disabled={isButtonDisabled}
+                > Get started</button>
             </div>
         </div>
 

@@ -44,6 +44,8 @@ const handleSelectCheckbox=(e)=>{
 
              <div className="c-option">  <input type="checkbox" onChange={handleSelectCheckbox} value={'twitter'} /> <img src="./assets/twitter.svg" alt="" /> Twitter</div>
 
+             <div className="c-option">  <input type="checkbox" onChange={handleSelectCheckbox} value={'twitter'} /> <img src="./assets/facebook.svg" alt="" /> Facebook</div>
+
 
         </div>
    <button  

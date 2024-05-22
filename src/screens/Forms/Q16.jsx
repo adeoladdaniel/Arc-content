@@ -40,12 +40,14 @@ function Q16(){
        </div>
 
         <div className="input-section">
-            <form action="">
-                <input type="text" placeholder="What are your long-term career goals as a creator?" value={formValues.long} onChange={(e) => {
+        
+                <input  type="text" placeholder="What are your long-term career goals as a creator?" value={formValues.long} onChange={(e) => {
                     setFormValues((prev) => ({...prev, long:e.target.value}))
                 }}/> <br />  <br />
 
                 <button
+
+                // className="buttoner"
                 type="button"
                 onClick={() => {
 
@@ -54,7 +56,7 @@ function Q16(){
                     setStep(16)
                 
                 }}> Continue</button>
-            </form>
+    
         </div>
 
 

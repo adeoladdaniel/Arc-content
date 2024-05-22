@@ -22,7 +22,35 @@
     }
 
 }
+.starboy {
+    position: absolute;
+    right: 0;
+    top: 255px;
+}
 
+.loud{
+    position: absolute;
+    left: 182px;
+}
+
+.text-section{
+    padding: 100px;
+
+    p{
+        line-height: 62px;
+        font-weight: 200;
+    }
+
+    h1{
+        font-weight: 900;
+    }
+}
+
+.bookboy{
+    position: absolute;
+    right: 0;
+    margin: 8rem 0px 0px 0px;
+}
 .hero-but{
     padding: 10px 29px;
     border: none;
