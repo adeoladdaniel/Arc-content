@@ -23,7 +23,7 @@ function Q15(){
 
     const [isChecked, setIsChecked] = useState(false);
     const {formValues,setFormValues,setStep}=useSurveyData()
-
+    console.log("Form Values: ", formValues)
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
     };
@@ -35,10 +35,18 @@ function Q15(){
     };
     const handleFormData=(e)=>{
       const checked=e.target.checked
+      let question = formValues?.surveyScores.platforms_actively_engaged_with;
       const value=e.target.value
+      const score = value === 'option1' ? 5 : 0
+      question.setScore(score);
 
-    setFormValues(prev=>({...prev, active_strategy:value}))
-
+      setFormValues(prev=>({...prev, 
+        active_strategy:value,
+        surveyScores: {...formValues.surveyScores, platforms_actively_engaged_with: question}
+      }))
+      console.log("value: ", value);
+      console.log("score: ", score);
+      console.log("question: ", question);
     }
 
     return(

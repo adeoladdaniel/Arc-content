@@ -19,7 +19,7 @@ function Q16(){
 
 
     const {formValues,setFormValues,setStep} = useSurveyData()
-
+    console.log("Form Values: ", formValues)
 
 
 

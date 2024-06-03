@@ -16,6 +16,7 @@ import Q15 from "./Q15"
 import Q16 from "./Q16"
 import Q17 from "./Q17"
 import Q18 from "./Q18"
+import SurveyResult from "../SurveyResult"
 
 
 
@@ -43,6 +44,7 @@ export default function (){
     {step===15 && <Q16/>}
     {step===16 && <Q17/>}
     {step===17 && <Q18/>}
+    {step===18 && <SurveyResult/>}
 
 
 

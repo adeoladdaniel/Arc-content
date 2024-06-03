@@ -23,7 +23,7 @@ function Q8(){
 
     const [isChecked, setIsChecked] = useState(false);
     const {formValues,setFormValues,setStep}=useSurveyData()
-
+    console.log("Form Values: ", formValues)
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
     };
@@ -34,10 +34,17 @@ function Q8(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-
+      let question = formValues?.surveyScores.current_level_of_engagement;
       const value=e.target.value
-
-    setFormValues(prev=>({...prev, engagement_strategy:value}))
+      const score = value === 'option1' ? 10 : 0
+      question.setScore(score);
+      setFormValues(prev=>({...prev, 
+        engagement_strategy:value,
+        surveyScores: {...formValues.surveyScores, current_level_of_engagement: question}
+      }))
+      console.log("value: ", value);
+      console.log("score: ", score);
+      console.log("question: ", question);
 
     }
 

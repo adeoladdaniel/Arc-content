@@ -23,7 +23,7 @@ function Q14(){
 
     const [isChecked, setIsChecked] = useState(false);
     const {formValues,setFormValues,setStep}=useSurveyData()
-
+    console.log("Form Values: ", formValues)
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
     };
@@ -35,10 +35,18 @@ function Q14(){
     };
     const handleFormData=(e)=>{
       // const checked=e.target.checked
+      let question = formValues?.surveyScores.collaboration_with_creators;
       const value=e.target.value
+      const score = value === 'option1' ? 10 : 0
+      question.setScore(score);
 
-    setFormValues(prev=>({...prev, collaborate_strategy:value}))
-
+      setFormValues(prev=>({...prev, 
+        collaborate_strategy:value,
+        surveyScores: {...formValues.surveyScores, collaboration_with_creators: question}
+      }))
+      console.log("value: ", value);
+      console.log("score: ", score);
+      console.log("question: ", question);
     }
 
     return(

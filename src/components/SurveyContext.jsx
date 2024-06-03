@@ -1,10 +1,11 @@
 import { createContext, useContext, useState } from "react"
+import { initializeSurveyScore } from './FormInitializer'
 
 export const SurveyContext = createContext({})
 
 export const SurveyWrapper = ({children}) => {
     
-    const [formValues, setFormValues] = useState({})
+    const [formValues, setFormValues] = useState({surveyScores: initializeSurveyScore()})
     const [step,setStep]=useState(1)
 
     const value={

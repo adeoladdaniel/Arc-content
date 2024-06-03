@@ -21,7 +21,7 @@ function Q5(){
   };
 
 
-  const {setFormValues,setStep}=useSurveyData()
+  const {formValues,setFormValues,setStep}=useSurveyData()
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -35,11 +35,18 @@ function Q5(){
       setIsChecked1(!isChecked1);
     };
     const handleFormData=(e)=>{
-      const value= e.target.value
-      const checked= e.target.checked
-      setFormValues(prev=>({...prev,know_your_niche: checked ? e.target.value :''}))
-
-
+      let question = formValues?.surveyScores.your_niche;
+      const value = e.target.value
+      const checked = e.target.checked
+      const score = value === 'option1' ? 15 : 0
+      question.setScore(score)
+      setFormValues(prev=>({...prev,
+        know_your_niche: checked ? e.target.value :'',
+        surveyScores: {...formValues.surveyScores, your_niche: question}
+      }));
+      console.log("value: ", value);
+      console.log("score: ", score);
+      console.log("question: ", question);
     }
 
 

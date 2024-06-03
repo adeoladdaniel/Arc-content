@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useState, useEffect} from "react";
 // import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import { FormDataProvider } from '../../components/FormDataContext';
 import InputComponent1 from '../../components/DisplayComponent';
 import InputComponent2 from '../../components/InputComponent1';
 import { SurveyContext, useSurveyData } from "../../components/SurveyContext";
+import { submitPrompt, generatePrompt } from "../../service/GPTPromptService"
 // import DisplayComponent from '../../components/InputComponent2';
 
 
@@ -19,7 +20,15 @@ function Q1(){
 
 
     const {setFormValues,setStep,formValues} = useSurveyData()
-
+    // const handleSubmitGPTPrompt = async () => {
+    //     const prompt = generatePrompt(formValues);
+    //     console.log("GPT Prompt: ", prompt);
+    //     const gptPromptResult = await submitPrompt(prompt);
+    //     console.log("GPT Prompt Result: ", gptPromptResult);
+    // }
+    // useEffect(() => {
+    //     handleSubmitGPTPrompt()
+    // })
 
     const navigate = useNavigate()
 

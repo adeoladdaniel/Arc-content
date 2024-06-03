@@ -11,7 +11,8 @@ import { useSurveyData } from "../../components/SurveyContext";
 
 
 function Q6(){
-    const {setFormValues,setStep}=useSurveyData()
+    const {formValues,setFormValues,setStep}=useSurveyData()
+    console.log("Form Values: ", formValues)
 const handleCheckbox=(e)=>{
     const value=e.target.value
     const checked=e.target.checked
